@@ -4,12 +4,12 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: "eslint:recommended",
+  extends: ["eslint:recommended", "plugin:jest/recommended"],
+  plugins: ["jest"],
   overrides: [
     {
       env: {
         node: true,
-        "jest/globals": true,
       },
       files: [".eslintrc.{js,cjs}"],
       parserOptions: {
